@@ -1,7 +1,7 @@
 package pack1515b;
 import java.util.Scanner;
 
-class Main{
+class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("表示する図形の個数は?:");
