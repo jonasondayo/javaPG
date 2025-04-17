@@ -8,6 +8,6 @@ class Point extends Shape {
 
     @Override
     void draw() {
-        System.out.println
+        System.out.println("+");
     }
 }
