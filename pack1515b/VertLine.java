@@ -1,4 +1,4 @@
-package pack1515b;
+
 
 class VertLine extends AbstLine {
     VertLine(int length) {

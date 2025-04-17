@@ -1,4 +1,4 @@
-package pack1515b;
+
 import java.util.Scanner;
 
 class Main {
@@ -11,7 +11,7 @@ class Main {
         for (int i = 0; i < num; i++) {
             int type;
             do{
-                System.out.printf("%d番の図形種類(1:点 / 2: 水平直線 / 3:垂直直線/ 4:長方形/ 5:正方形/ 6:直角三角形):" , i+1);
+                System.out.printf("%d番の図形種類(1:点 / 2: 水平直線 / 3:垂直直線/ 4:長方形/ 5:正三角形/ 6:直角三角形):" , i+1);
                 type = sc.nextInt();
             }while(type < 1 || type > 6);
             switch(type){
@@ -27,7 +27,7 @@ class Main {
                 case 4:
                     System.out.print("幅:");
                     int width = sc.nextInt();
-                    System.out.print("高さ");
+                    System.out.print("高さ:");
                     int height = sc.nextInt();
                     p[i] = new Reactangle(width, height);
                     break;

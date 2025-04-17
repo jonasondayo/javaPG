@@ -1,4 +1,3 @@
-package pack1515b;
 
 class RightTriangle extends AbstTriangle {
     RightTriangle(int side) {
@@ -11,8 +10,9 @@ class RightTriangle extends AbstTriangle {
 
     @Override 
     void draw() {
-        for(int i = 0; i <this.getSide(); i++) {
-            for(int j = 0; j < j +1; j++) {
+        System.out.println("this.getSide()" + this.getSide());
+        for(int i = 0; i < this.getSide(); i++) {
+            for(int j = 0; j < i +1; j++) {
                 System.out.print("*");
             }
             System.out.print("\n");

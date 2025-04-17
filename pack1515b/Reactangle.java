@@ -1,4 +1,4 @@
-package pack1515b;
+
 
 class Reactangle extends Shape implements Plane2D {
     private int width, height;
@@ -19,7 +19,8 @@ class Reactangle extends Shape implements Plane2D {
             for (int j = 0; j < this.width; j++) {
                 System.out.print("*");
             }
-            System.out.println();
+            // プリント
+            System.out.println("*");
         }
     }
 

@@ -1,4 +1,4 @@
-package pack1515b;
+
 
 class HorzLine extends AbstLine {
     HorzLine (int length) {
