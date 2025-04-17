@@ -1,4 +1,4 @@
-
+package pack1515b;
 import java.util.Scanner;
 
 class Main {

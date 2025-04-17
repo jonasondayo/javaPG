@@ -1,4 +1,4 @@
-
+package pack1515b;
 
 class EqTriangle extends AbstTriangle {
     EqTriangle(int side) {

@@ -1,4 +1,4 @@
-
+package pack1515b;
 
 abstract class AbstTriangle extends Shape implements Plane2D {
     private int side;

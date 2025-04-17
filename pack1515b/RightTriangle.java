@@ -1,3 +1,4 @@
+package pack1515b;
 
 class RightTriangle extends AbstTriangle {
     RightTriangle(int side) {

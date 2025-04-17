@@ -1,4 +1,4 @@
-
+package pack1515b;
 
 abstract class AbstLine extends Shape {
     private int length;
