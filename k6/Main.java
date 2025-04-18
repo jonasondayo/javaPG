@@ -8,6 +8,4 @@ public class Main {
         comment.Kouhan.callDeae();
         comment.Kouhan.showMondokoro();
     }
-
-
 }
