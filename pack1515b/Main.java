@@ -19,10 +19,14 @@ class Main {
                     p[i] = new Point();
                     break;
                 case 2:
+                    System.out.print("長さ:");
+                    int length = sc.nextInt();
+                    new HorzLine(length);
+                    break;
                 case 3:
                     System.out.print("長さ:");
                     int length = sc.nextInt();
-                    p[i] = (type == 2) ? new HorzLine(length) : new VertLine(length);
+                    new VertLine(length);
                     break;
                 case 4:
                     System.out.print("幅:");
