@@ -12,11 +12,11 @@ class EqTriangle extends AbstTriangle {
 
     @Override
     void draw() {
-        for (int i = 0; i < this.getSide(); i++) {
-            for(int j = 0; j <this.getSide()-i-1;j++) {
+        for (int i = 1; i < this.getSide(); i++) {
+            for(int j = 1; j <=this.getSide()-i;j++) {
                 System.out.print(" ");
             }
-            for (int k = 0; k < (i*2)+1; k++) {
+            for (int k = 1; k < (i*2)-1; k++) {
                 System.out.print("*");
             }
             System.out.println();
