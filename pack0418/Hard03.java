@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-class Hard02 {
+class Hard03 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("1辺の長さを入力:");
