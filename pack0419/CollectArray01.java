@@ -16,5 +16,16 @@ class CollectArray01 {
         }
         System.out.println("Nol02: 最大値は" + max + "である");
         System.out.println("Nol01: 合計は" + sum + "である");
+
+        ArrayList<Integer> ovenArray = new ArrayList<>();
+        for (Integer num : numArray) {
+            if (num % 2 == 0) {
+                ovenArray.add(num);
+            }
+        }
+        System.out.println("Normal04" + ovenArray);
+
+        numArray.clear();
+        System.out.println("Normal05" + numArray);
     }
 }
