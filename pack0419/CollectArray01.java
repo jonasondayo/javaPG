@@ -1,5 +1,5 @@
-
 import java.util.*;
+
 class CollectArray01 {
     public static void main(String[] args) {
         ArrayList<Integer> numArray = new ArrayList<>();
