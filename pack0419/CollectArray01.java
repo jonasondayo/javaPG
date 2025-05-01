@@ -12,7 +12,7 @@ class CollectArray01 {
             if (max <= num) {
                 max = num;
             }
-             sum += num;
+            sum += num;
         }
         System.out.println("Nol02: 最大値は" + max + "である");
         System.out.println("Nol01: 合計は" + sum + "である");
