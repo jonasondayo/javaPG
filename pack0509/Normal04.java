@@ -6,7 +6,7 @@ public class Normal04 {
         for (int num: nums) {
             sum+=num;
         }
-        int [] results = new int[5];
+        int [] results = new int[nums.length + 1];
         results[0] = sum;
         for (int i=0;i<nums.length;i++) {
             results[i+1] = nums[i];
