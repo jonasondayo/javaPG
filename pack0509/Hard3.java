@@ -7,10 +7,10 @@ public class Hard3 {
         for (int i=0; i<10;i++) {
             System.out.print("数字を入力してください:");
             int score = sc.nextInt();
-            scores[i] = score;
+            scores[scores.length - i - 1] = score;
         }
         for (int i=0;i<scores.length; i++) {
-            System.out.println(scores[scores.length - i - 1]);
+            System.out.println(scores[i]);
         }
     }
 }
