@@ -76,9 +76,9 @@ public class Hard {
         // 教科の数だけ得点を収納する配列を作成する
         int [] scores = new int[subjects.length];
         // 合計値のための変数sumをfor文の外で作成する
-        // 平均で割り算するときにも利用するためdouble
-        // intでも良い。平均を求める時に(double)のキャストする必要がある 
-        double sum=0;
+        // 平均で割り算するときにも利用するためdoubleで宣言する方が処理的には良い
+        // intでも良い。平均を求める時に(double)のキャストする必要がある
+        int sum = 0;
         // 教科の配列の数だけ繰り返す
         for (int i=0; i<subjects.length;i++) {
             //　教科を1つずつ表示
@@ -91,15 +91,16 @@ public class Hard {
         }
         System.out.println();
         // 平均値を計算する 
-        // intでsum を宣言した場合は doble ave = (double)(sum/scores.length)という形
-        // int→doubleのキャストはできれば避けたほうが良い double→intのキャストは問題ない。
-        double ave = sum / scores.length;
+        // sum をintで宣言した場合はdoubleでキャストをする
+        // int→doubleのキャストよりdouble→intのキャストの方が負荷は小さい
+        // intでsumをしてdoubleでキャスト読みやすさや書きやすさが少々良い
+        double ave = (double) sum / scores.length;
         // ２つの配列からそれぞれ各教科と点数を表示する。
         for (int i=0;i<subjects.length;i++) {
             System.out.println(subjects[i] +"の点数は"+ scores[i] + "点です。");
         }
         // sumをintでキャストする。大きい型から小さい型への変換するのは良いが逆は極力避ける
-        System.out.println("合計は" + (int)sum + "です。");
+        System.out.println("合計は" + sum + "です。");
         System.out.println("平均は" + ave + "点です。");
     }
 }
@@ -216,7 +217,7 @@ public class Nightmare01 {
         for (int i=0; i<10;i++) {
             // array[i]の形で表示
             System.out.printf("array[%d]:", i);
-            // 配列にある値の数*を表示する
+            // 配列にある数値の数*を表示する
             for (int z=1; z<=scores[i];z++) {
                 System.out.print("*");
             }
