@@ -1,3 +1,4 @@
+// 2PG配列とfor文の配列の答え
 public class Normal03 {
     public static void main(String[] args) {
         // 教科の配列
