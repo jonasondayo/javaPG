@@ -39,6 +39,13 @@
 <h1 class="yg-title">YGブロック崩し（新立）</h1>
 <div class="yg-btns">
     <button class="yg-start-btn" id="start-game">ゲームスタート</button>
+    <span>速度</span>
+    <select class="yg-select" id="yg-select-game">
+        <option value="10">ゆっくり</option>
+        <option value="5" selected>普通</option>
+        <option value="3">速い</option>
+        <option value="1">最速</option>
+    </select>
 </div>
 
 <canvas id="myCanvas" width="740" height="420" class="yg-block"></canvas>
@@ -214,8 +221,15 @@
     drawPaddle();
 
     const startGame = document.getElementById("start-game");
+    const gameSelect = document.getElementById("yg-select-game");
+    let gameSpeed = Number(gameSelect.value);
+    gameSelect.addEventListener("change", function (e) {
+        gameSpeed = document.getElementById("yg-select-game").value;
+        console.log(gameSpeed);
+    })
     startGame.addEventListener("click", function (e) {
-        setInterval(draw, 1);
+        console.log("click",gameSpeed);
+        setInterval(draw, gameSpeed);
     });
 </script>
 
