@@ -19,11 +19,29 @@
             font-family: monospace;
             padding: 20px;
         }
+        .yg-block {
+            margin-top: 10px;
+        }
+        .yg-start-btn {
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            background: #ea5532;
+            color: #ffedab;
+            margin: 10px auto;
+            border: none;
+        }
+        .yg-btns {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 <h1 class="yg-title">YGブロック崩し（新立）</h1>
-<canvas id="myCanvas" width="740" height="420"></canvas>
+<div class="yg-btns">
+    <button class="yg-start-btn" id="start-game">ゲームスタート</button>
+</div>
+
+<canvas id="myCanvas" width="740" height="420" class="yg-block"></canvas>
 
 <script>
     let canvas = document.getElementById("myCanvas");
@@ -47,7 +65,8 @@
     let brickOffsetLeft = 30;
     let score = 0;
     let lives = 2;
-    let colorCode = "#f9e79f";
+    let blockColor = "#f9e79f";
+    let fontColor = "#e4007f";
 
     let bricks = [];
     for(let c=0; c<brickColumnCount; c++) {
@@ -105,14 +124,14 @@
     function drawBall() {
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-        ctx.fillStyle = colorCode;
+        ctx.fillStyle = blockColor;
         ctx.fill();
         ctx.closePath();
     }
     function drawPaddle() {
         ctx.beginPath();
         ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-        ctx.fillStyle = colorCode;
+        ctx.fillStyle = blockColor;
         ctx.fill();
         ctx.closePath();
     }
@@ -126,7 +145,7 @@
                     bricks[c][r].y = brickY;
                     ctx.beginPath();
                     ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                    ctx.fillStyle = colorCode;
+                    ctx.fillStyle = blockColor;
                     ctx.fill();
                     ctx.closePath();
                 }
@@ -134,15 +153,16 @@
         }
     }
     function drawScore() {
-        ctx.font = "16px Arial";
-        ctx.fillStyle = colorCode;
+        ctx.font = "20px Arial";
+        ctx.fillStyle = fontColor;
         ctx.fillText("得点: "+score, 8, 20);
     }
     function drawLives() {
-        ctx.font = "16px Arial";
-        ctx.fillStyle = colorCode;
+        ctx.font = "20px Arial";
+        ctx.fillStyle = fontColor;
         ctx.fillText("命: "+lives, canvas.width-65, 20);
     }
+    
 
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -189,8 +209,14 @@
         x += dx;
         y += dy;
     }
+    drawBricks();
+    drawBall();
+    drawPaddle();
 
-    setInterval(draw, 1)
+    const startGame = document.getElementById("start-game");
+    startGame.addEventListener("click", function (e) {
+        setInterval(draw, 1);
+    });
 </script>
 
 </body>
