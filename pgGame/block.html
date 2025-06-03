@@ -29,23 +29,41 @@
             color: #ffedab;
             margin: 10px auto;
             border: none;
+            border-radius: 20%;
         }
         .yg-btns {
             text-align: center;
+            background: #ffedab;
+            width: 400px;
+            margin: 0 auto;
+        }
+        .speed-message {
+            margin-right: 5px;
+            color: purple;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .yg-select {
+            margin-right: 15px;
+            color: purple;
+            width: 60px;
+            background-color: whitesmoke;
+            font-family: 'Courier New', Courier, monospace;
+            height: 30px;
+            border-radius: 20%;
         }
     </style>
 </head>
 <body>
-<h1 class="yg-title">YGブロック崩し（新立）</h1>
+<h1 class="yg-title">YGブロック崩し</h1>
 <div class="yg-btns">
-    <button class="yg-start-btn" id="start-game">ゲームスタート</button>
-    <span>速度</span>
+    <span class="speed-message">速度</span>
     <select class="yg-select" id="yg-select-game">
         <option value="10">ゆっくり</option>
         <option value="5" selected>普通</option>
         <option value="3">速い</option>
         <option value="1">最速</option>
     </select>
+    <button class="yg-start-btn" id="start-game">ゲームスタート</button>
 </div>
 
 <canvas id="myCanvas" width="740" height="420" class="yg-block"></canvas>
@@ -225,10 +243,8 @@
     let gameSpeed = Number(gameSelect.value);
     gameSelect.addEventListener("change", function (e) {
         gameSpeed = document.getElementById("yg-select-game").value;
-        console.log(gameSpeed);
-    })
+    });
     startGame.addEventListener("click", function (e) {
-        console.log("click",gameSpeed);
         setInterval(draw, gameSpeed);
     });
 </script>
