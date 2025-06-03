@@ -3,7 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <title>YGブロック崩し（新立）</title>
-    <style>* { padding: 0; margin: 0; } canvas { background: #bb8fce; display: block; margin: 0 auto; }
+    <style>
+        * { 
+            padding: 0; 
+            margin: 0; 
+        } 
+        canvas { 
+            background: #bb8fce; 
+            display: block; 
+            margin: 0 auto; 
+        }
         .yg-title {
             text-align: center;
             color: #f5ac35;
@@ -84,7 +93,7 @@
                         b.status = 0;
                         score++;
                         if(score == brickRowCount*brickColumnCount) {
-                            alert("クリアーしました！");
+                            alert("クリアーおめでとうございます！！");
                             document.location.reload();
                         }
                     }
